@@ -1,0 +1,20 @@
+---
+layout: default
+title: Categories
+permalink: /categories/
+---
+
+<div class="categories-page">
+    <h1>Categories</h1>
+    <div class="categories-list">
+        {% assign categories = site.posts | map: 'categories' | join: ',' | split: ',' | uniq | sort %}
+        {% for category in categories %}
+        <div class="category-item">
+            <h2><a href="{{ '/categories/' | relative_url }}{{ category | slugify }}/">{{ category }}</a></h2>
+            {% assign posts = site.posts | where_exp: "post", "post.categories contains category" %}
+            <p>{{ posts.size }} post{% if posts.size != 1 %}s{% endif %}</p>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+

@@ -1,0 +1,57 @@
+# Site Settings
+title: "Sangam Kumar"
+author: "Sangam Kumar"
+description: "Software Engineering, Computer Science, Mathematics, Reading, and Projects"
+url: "https://sangam-kumar.github.io" # Change to your GitHub username
+baseurl: "" # leave blank if using username.github.io, or use "/repository-name"
+github_username: sangam-kumar # Change to your GitHub username
+
+# Build Settings
+markdown: kramdown
+highlighter: rouge
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+
+# Exclude
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle
+  - vendor/cache
+  - vendor/gem
+  - vendor/ruby
+  - README.md
+  - LICENSE
+  - .gitignore
+
+# Navigation
+navigation:
+  - title: Blog
+    url: /blog
+  - title: Resume
+    url: /resume
+  - title: About
+    url: /about
+
+# Social Links
+social:
+  github: sangam-kumar
+  linkedin: sangam-kumar
+
